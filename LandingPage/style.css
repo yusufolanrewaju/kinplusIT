@@ -1,0 +1,422 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.head, nav {
+    background-color: rgb(31, 31, 67);
+    color: white;
+    padding: 10px;
+    height: 250px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    height: 100px;
+    padding: 20px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 6px 5px -4px black;
+    z-index: 2;
+}
+
+.nav p {
+    font-size: 25px;
+}
+
+.tabs {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.tabs a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.menu {
+    display: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: default;
+    font-size: 25px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 25px;
+}
+
+.top {
+    display: none;
+}
+
+.menu input{
+    outline: none;
+    cursor: pointer;
+    outline-width: 0;
+}
+
+.menu input:checked{
+    outline: none;
+}
+
+.tabs a:hover,.tabs a:focus {
+    background-color: rgba(223, 219, 219, 0.231);
+}
+
+.active {
+    background-color: rgba(223, 219, 219, 0.423);
+}
+
+h1 {
+    text-transform: capitalize;
+    text-align: center;
+    margin: 25px;
+    z-index: 1;
+}
+
+p.head_part {
+    margin: 10px auto;
+    max-width: 550px;
+    text-align: center;
+    z-index: 1;
+}
+
+.home {
+    display: block;
+    word-spacing: 5px;
+    font-size: 14px;
+    padding: 15px 35px;
+    font-weight: light;
+}
+
+.home span {
+    color: grey;
+}
+
+.home a {
+    text-decoration: none;
+    color: rgb(31, 31, 67);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+h3 {
+    font-size: 15px;
+    font-weight: 550;
+    margin-top: 10px;
+}
+
+.container {
+    min-width: 350px;
+    max-width: 380px;
+    height: 500px;
+    padding: 0 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 1px 4px 1px grey;
+    border-radius: 5px;
+    line-height: 25px;
+    margin: 25px 30px;
+}
+
+.container:hover {
+    box-shadow: 0px 2px 5px 3px grey;
+}
+
+.container .image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.container img {
+    width: 100px;
+    height: 100px;
+}
+
+.x2 img {
+    width: 120px;
+}
+
+.pricing {
+    list-style: none;
+    color: rgb(77, 77, 213);
+    font-size: larger;
+    margin-top: 20px;
+}
+
+.pricing li {
+    color: rgb(239, 13, 51);
+}
+
+.btn {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(45, 112, 236);
+    border: none;
+    margin: 20px 0 30px 0;
+    box-shadow: 1px 1px 10px 0 black;
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgb(31, 31, 67);
+    color: white;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 50px;
+    margin-top: 10px;
+    font-size: 18px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.footer div {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin-top: 20px;
+}
+
+footer img {
+    height: 60px;
+    width: 140px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+footer a, footer p {
+    line-height: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+.footnote {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 20px;
+    display: inline-flex;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+small {
+    text-align: center;
+}
+
+footer a {
+    margin-top: 20px;
+}
+
+footer div p:nth-child(7){
+    margin-top: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 30px;
+    margin: 0 auto 40px auto;
+}
+
+@media screen and (max-width: 945px) {
+
+    footer {
+        display: flex;
+        padding-left: 0px;
+        height: max-content;
+        flex-direction: column;
+    }
+
+    .stop-scrolling {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .tabs {
+        display: none;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        padding: 10px;
+        gap: 15px;
+        margin-left: -10px;
+        width: 100%;
+    }
+
+    .footer div {
+        width: 42%;
+        margin-top: 30px;
+    }
+
+    .menu {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 4;
+        outline: none;
+        text-decoration: none;
+    }
+
+    .menu input {
+        appearance: none;
+    }
+
+    .fa-remove {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .fa-navicon {
+        position: absolute;
+    }
+
+    .menu:has(input:checked) > .fa-navicon {
+        visibility: hidden;
+    }
+
+    .menu:has(input:checked) > .fa-remove {
+        visibility: visible;
+    }
+
+    .menu:active {
+        background-color: rgba(255, 255, 255, 0.487);
+    } 
+    
+    .menu:hover {
+        background-color: rgba(255, 255, 255, 0.077);
+    } 
+    
+    .menu:has(input:checked){
+        background-color: rgb(255, 255, 255);
+        color: black;
+        font-weight: 100;
+    }
+
+    .menu:has(input:checked){
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        z-index: 6;
+    }
+
+    .tabs {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgb(29, 29, 62);
+        line-height: 45px;
+        width: 240px;
+        padding: 100px 0 100px 5px;
+        height: 100vh;
+        translate: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        z-index: 5;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+    }
+
+    .tabs::before{
+        content: '';
+        background-color: rgb(0, 0, 0);
+        filter: opacity(0.5);
+        width: 100vw;
+        position: fixed;
+        right: 240px;
+        z-index: 4;
+        translate: 500%;
+        height: 100vh;
+        top: 0;
+    }
+
+    .top {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        right: 240px;
+        top: 0;
+        width: 200%;
+        z-index: 6;
+        display: inline;
+        translate: 200%;
+        display: block;
+    }
+    
+    .menu:has(input:checked) + .tabs,
+    .menu:has(input:checked) + .tabs::before,
+    .menu:has(input:checked) ~ .top
+    {
+        translate: 0;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+
+    .nav p {
+        font-size: 15px;
+    }
+
+    .container {
+        min-width: 90%;
+        max-width: 400px;
+        height: max-content;
+    }
+
+    footer {
+        height: max-content;
+    }
+
+    .footer {
+        display: block;
+        margin-left: 10px;
+    }
+
+    .footer div {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .footnote {
+        font-size: 13px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px 0 60px;
+    }
+    
+}

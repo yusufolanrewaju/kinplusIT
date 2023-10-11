@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(86, 126, 126);
+            scale: 75%;
+        }
+
+        .body {
+            background-color: white;
+            border-radius: 10px;
+            height: 835px;
+            padding: 25px ;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            width: fit-content;
+        }
+
+        .images img {
+            width: 350px;
+            aspect-ratio: 3/2;
+            border-radius: 5px;
+            border: 5px solid rgb(172, 147, 180);
+            box-shadow: 4px 3px 21px -4px pink;
+            transition: 700ms;
+        }
+
+        .images img:hover {
+            transform: scale(1.05);
+            filter: grayscale();
+        } 
+
+        .head {
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+            font-size: 35px;
+            color: tan;
+        }
+
+        a button {
+            padding: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            width: 100%;
+            border-radius: 10px;
+            border: none;
+            margin-top: 10px;
+            letter-spacing: 5px;
+            cursor: pointer;
+        } 
+
+        a button:active {
+            transform: scale(.95);
+        }
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <div class="head">
+            <h1>Image Gallery</h1>
+        </div>
+
+        <div class="body">
+            <div class="images">
+
+                <img src="images/Gallery/italy-mountains-dawn-daybreak-147411.jpeg" alt="">
+                <img src="images/Gallery/istockphoto-1297349747-612x612.jpg" alt="">
+                <img src="images/Gallery/istockphoto-583809524-612x612.jpg" alt="">
+                <img src="images/Gallery/pexels-photo-2325446.jpeg" alt="">
+
+            </div>
+
+            <div class="images">
+
+                <img src="images/Gallery/pexels-photo-13614134.jpeg" alt="">
+                <img src="images/Gallery/pexels-photo-808465.jpeg" alt="">
+                <img src="images/Gallery/pexels-photo-2325446.jpeg" alt="">
+                <img src="images/Gallery/pexels-photo-730981.jpeg" alt="">
+
+            </div>
+
+            <div class="images">
+
+                <img src="images/Gallery/italy-mountains-dawn-daybreak-147411.jpeg" alt="">
+                <img src="images/Gallery/istockphoto-1297349747-612x612.jpg" alt="">
+                <img src="images/Gallery/istockphoto-583809524-612x612.jpg" alt="">
+               <img src="images/Gallery/pexels-photo-2325446.jpeg" alt="">
+            
+            </div>
+        </div>
+        <div class="btm">
+        <a href="welcome.html"><button>Homepage</button></a>
+        </div>
+    </div>
+</body>
+</html>

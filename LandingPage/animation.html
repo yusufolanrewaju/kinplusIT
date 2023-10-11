@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" 
+        content="width=device-width,
+                 initial-scale=1.0">
+  <title>Pentagon</title>
+</head>
+<body>
+  <div class="pentagon"></div>
+
+  <svg height="220" width="400">
+      		<polygon points="60 13,110 48,92 110,30 110,13 48" 
+				stroke="violet" 
+				fill="blue" stroke-width="2" />
+    </svg>
+
+
+
+</body>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        
+      }
+      /* creating the pentagon shape */
+      .pentagon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 0;
+        width: 180px;
+        border-top: 180px solid rgb(0, 66, 128);
+        border-left: 90px solid transparent;
+        border-right: 90px solid transparent; 
+      }
+     
+      .pentagon:after{
+        position: absolute;
+        content: '';
+        border-bottom: 180px solid rgb(0, 66, 128);
+        border-left: 180px solid transparent;
+        border-right: 180px solid transparent;
+        bottom: 179.2px;
+        left: -90px;
+      }
+     </style>
+
+</html>

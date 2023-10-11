@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Attributes</title>
+
+    <style>
+
+        *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        body {
+            height: 98vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .body {
+            border: 2px solid gray;
+            width: 640px;
+            background-color: whitesmoke;
+        }
+
+        p {
+            background-color: rgb(184, 224, 211);
+            padding: 3px;
+            color: rgb(151, 134, 110);
+            font-weight: 600;
+            margin-top: 0;
+        }
+
+        .header {
+           margin: 10px auto;
+           padding: 0 15px;
+        }
+
+        td img {
+            width: 25px;
+            mix-blend-mode: multiply;
+        }
+
+        .main {
+            text-align: left;
+        }
+        .main,.row {
+            padding: 5px;
+            border-bottom: 1.9px solid rgb(225, 221, 221);
+            border-collapse: collapse;
+        }
+
+        .row {
+            padding-left: 8px;
+        }
+
+        #line {
+            border-bottom: 1px solid rgb(208, 207, 207);
+        }
+
+        .main input,select{
+            outline: none;
+            padding: 5px 5px 2px 6px;
+            border: none;
+            box-shadow: 47px 47px 2px -45px rgba(0,0,0,1) inset, -19px -4px 0px -16px rgba(0,0,0,0.45);
+        }
+
+        .btn {
+            margin: 10px;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="body">
+
+        <p>Column Attributes</p>
+
+        <div class="header">
+            <table>
+                <tr>
+                    <td id="line">Headings Type:</td>
+                    <td><input type="radio" name="heading-types" id="coln"></td>
+                    <td><label for="coln">Column Names</label></td>
+                    <td><input type="radio" name="heading-types" id="colnic"></td>
+                    <td><label for="colnic">Column Names (InitCap)</label></td>
+                    <td><input type="radio" name="heading-types" id="custom" checked></td>
+                    <td><label for="custom">Custom</label></td>
+                    <td><input type="radio" name="heading-types" id="plsql"></td>
+                    <td><label for="plsql">PL/SQL</label></td>
+                    <td><input type="radio" name="heading-types" id="none"></td>
+                    <td><label for="none">None</label></td>
+                </tr>
+            </table>
+        </div>
+
+        <table class="main">
+
+            <tr>
+                <th class="row"></th>
+                <th class="row">Alias</th>
+                <th class="row">Link</th>
+                <th class="row">Edit</th>
+                <th class="row">Heading</th>
+                <th class="row">Column Alignment</th>
+                <th class="row">Heading Alignment</th>
+                <th class="row">Show</th>
+            </tr>
+
+            <tr>
+                <td class="row"><img src="images/verified.jpg"></td>
+                <td class="row">[row selector]</td>
+                <td class="row"></td>
+                <td class="row"><input type="checkbox" checked></td>
+                <td class="row"><input type="text" placeholder="&npsb;"></td>
+                <td class="row">
+                    <select>
+                        <option value="center">center</option>
+                        <option value="left" selected>left</option>
+                        <option value="right">right</option>
+                    </select>
+                </td>
+                <td class="row">
+                    <select>
+                        <option value="center" selected>center</option>
+                        <option value="left">left</option>
+                        <option value="right">right</option>
+                        <option value="empty">&nbsp;</option>
+                    </select>
+
+                </td>
+                <td class="row"><input type="checkbox" checked></td>
+            </tr>
+
+            <tr>
+                <td class="row"><img src="images/verified.jpg"></td>
+                <td class="row">EMPLOYEE_ID</td>
+                <td class="row"></td>
+                <td class="row"><input type="checkbox" checked></td>
+                <td class="row"><input type="text" placeholder="Employee Id"></td>
+                <td class="row">
+                    <select>
+                        <option value="center">center</option>
+                        <option value="left" selected>left</option>
+                        <option value="right">right</option>
+                    </select>
+                </td>
+                <td class="row">
+                    <select>
+                        <option value="center">center</option>
+                        <option value="left">left</option>
+                        <option value="right">right</option>
+                        <option value="empty" selected>&nbsp;</option>
+                    </select>
+
+                </td>
+                <td class="row"><input type="checkbox"></td>
+            </tr>
+
+            <tr>
+                <td class="row"><img src="images/verified.jpg"></td>
+                <td class="row">FIRST_NAME</td>
+                <td class="row"></td>
+                <td class="row"><input type="checkbox" checked></td>
+                <td class="row"><input type="text" placeholder="First Name"></td>
+                <td class="row">
+                    <select>
+                        <option value="center">center</option>
+                        <option value="left" selected>left</option>
+                        <option value="right">right</option>
+                    </select>
+                </td>
+                <td class="row">
+                    <select>
+                        <option value="center">center</option>
+                        <option value="left">left</option>
+                        <option value="right">right</option>
+                        <option value="empty" selected>&nbsp;</option>
+                    </select>
+
+                </td>
+                <td class="row"><input type="checkbox" checked></td>
+            </tr>
+
+            <tr>
+                <td class="row"><img src="images/verified.jpg"></td>
+                <td class="row">LAST_NAME</td>
+                <td class="row"></td>
+                <td class="row"><input type="checkbox" checked></td>
+                <td class="row"><input type="text" placeholder="Last Name"></td>
+                <td class="row">
+                    <select>
+                        <option value="center">center</option>
+                        <option value="left" selected>left</option>
+                        <option value="right">right</option>
+                    </select>
+                </td>
+                <td class="row">
+                    <select>
+                        <option value="center">center</option>
+                        <option value="left">left</option>
+                        <option value="right">right</option>
+                        <option value="empty" selected>&nbsp;</option>
+                    </select>
+
+                </td>
+                <td class="row"><input type="checkbox" checked></td>
+            </tr>
+
+            <tr>
+                <td class="row"><img src="images/verified.jpg"></td>
+                <td class="row">HIRE_DATE</td>
+                <td class="row"></td>
+                <td class="row"><input type="checkbox" checked></td>
+                <td class="row"><input type="text" placeholder="Hire Date"></td>
+                <td class="row">
+                    <select>
+                        <option value="center">center</option>
+                        <option value="left" selected>left</option>
+                        <option value="right">right</option>
+                    </select>
+                </td>
+                <td class="row">
+                    <select>
+                        <option value="center">center</option>
+                        <option value="left">left</option>
+                        <option value="right">right</option>
+                        <option value="empty" selected>&nbsp;</option>
+                    </select>
+
+                </td>
+                <td class="row"><input type="checkbox" checked></td>
+            </tr>
+
+            <tr>
+                <td class="row"><img src="images/verified.jpg"></td>
+                <td class="row">SALARY</td>
+                <td class="row"></td>
+                <td class="row"><input type="checkbox" checked></td>
+                <td class="row"><input type="text" placeholder="Salary"></td>
+                <td class="row">
+                    <select>
+                        <option value="center">center</option>
+                        <option value="left" selected>left</option>
+                        <option value="right">right</option>
+                    </select>
+                </td>
+                <td class="row">
+                    <select>
+                        <option value="center">center</option>
+                        <option value="left">left</option>
+                        <option value="right">right</option>
+                        <option value="empty" selected>&nbsp;</option>
+                    </select>
+
+                </td>
+                <td class="row"><input type="checkbox" checked></td>
+            </tr>
+
+            <tr>
+                <td class="row"><img src="images/verified.jpg"></td>
+                <td class="row">DEPARTMENT_ID</td>
+                <td class="row"></td>
+                <td class="row"><input type="checkbox" checked></td>
+                <td class="row"><input type="text" placeholder="Department Id"></td>
+                <td class="row">
+                    <select>
+                        <option value="center">center</option>
+                        <option value="left" selected>left</option>
+                        <option value="right">right</option>
+                    </select>
+                </td>
+                <td class="row">
+                    <select>
+                        <option value="center">center</option>
+                        <option value="left">left</option>
+                        <option value="right">right</option>
+                        <option value="empty" selected>&nbsp;</option>
+                    </select>
+
+                </td>
+                <td class="row"><input type="checkbox" checked></td>
+            </tr>
+
+        </table>
+
+        <div class="btn">
+            <a href="welcome.html"><button type="submit">Go Back</button></a>
+        </div>
+
+    </div>
+</body>
+</html>

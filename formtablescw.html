@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .body {
+            min-width: 800px;
+            border-radius: 10px;
+            border: 5px solid rgba(196, 194, 188, 0.934);
+            overflow: hidden;
+            background-color: rgb(227, 210, 188);
+        }
+
+        @media screen and (max-width: 700px){
+            body {
+                transform: scale(70%);
+            }
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(20px);
+            padding: 0 5px;
+        }
+        .header h3 {
+            color: rgb(45, 89, 142);
+        }
+        hr {
+            border: 1.5px solid grey;
+        }
+
+        .header .btn {
+            transform: translateY(35%);
+        }
+        a {
+            text-decoration: none;
+        }
+
+        input {
+            outline: none;
+            box-shadow: 0 1px 2px  rgb(60, 63, 60);
+        }
+
+        .btn button {
+            background-color: whitesmoke;
+            border: whitesmoke;
+            box-shadow: 0 2px 2px;
+            color: rgb(139, 125, 43);
+            font-weight: bold;
+            margin-right: 5px;
+            border-radius: 3px;
+            padding: 2px 7px;
+            text-transform: capitalize;
+            cursor: pointer;
+            margin-bottom: 2px;
+        }
+
+        .btn button:active {
+            transform: scale(95%);
+        }
+
+        th {
+            background-color: rgb(166, 157, 114);
+            color: rgb(45, 89, 142);
+            font-size: 13px;
+        }
+
+        td, .footer {
+            background-color: rgb(246, 216, 179);
+        }
+
+        table,th,td {
+            border: 2px solid ;
+            border-collapse: collapse;
+        }
+
+        th,td {
+            padding: 5px 10px;
+        }
+
+        .footer {
+            padding: 10px;
+            padding-left: 75%;
+        }
+
+        .rows {
+            display: flex;
+            gap: 10px;
+        }
+
+        .adr {
+            margin: 10px  0 10px 105px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="body">
+    <div class="header">
+        <h3>Tabular Form</h3>
+        <div class="btn">
+            <button>Cancel</button>
+            <button>Delete</button>
+            <button>Apply Changes</button>
+        </div>
+    </div><hr>
+
+    <div class="main">
+        <table>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Hire Date</th>
+                <th>Salary</th>
+                <th>Departmental ID</th>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" ></td>
+                <td><input type="text" placeholder="Steven"></td>
+                <td><input type="text" placeholder="King"></td>
+                <td><input type="date"></td>
+                <td><input type="text" placeholder="24000"></td>
+                <td>
+                    <select name="">
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80" selected>80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" ></td>
+                <td><input type="text" placeholder="Steven"></td>
+                <td><input type="text" placeholder="King"></td>
+                <td><input type="date"></td>
+                <td><input type="text" placeholder="24000"></td>
+                <td>
+                    <select name="">
+                        <option value="50">50</option>
+                        <option value="60" selected>60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" ></td>
+                <td><input type="text" placeholder="Steven"></td>
+                <td><input type="text" placeholder="King"></td>
+                <td><input type="date"></td>
+                <td><input type="text" placeholder="24000"></td>
+                <td>
+                    <select name="">
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80" selected>80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" ></td>
+                <td><input type="text" placeholder="Steven"></td>
+                <td><input type="text" placeholder="King"></td>
+                <td><input type="date"></td>
+                <td><input type="text" placeholder="24000"></td>
+                <td>
+                    <select name="">
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100" selected>100</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" ></td>
+                <td><input type="text" placeholder="Steven"></td>
+                <td><input type="text" placeholder="King"></td>
+                <td><input type="date"></td>
+                <td><input type="text" placeholder="24000"></td>
+                <td>
+                    <select name="">
+                        <option value="50" selected>50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" ></td>
+                <td><input type="text" placeholder="Steven"></td>
+                <td><input type="text" placeholder="King"></td>
+                <td><input type="date"></td>
+                <td><input type="text" placeholder="24000"></td>
+                <td>
+                    <select name="">
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70" selected>70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" ></td>
+                <td><input type="text" placeholder="Steven"></td>
+                <td><input type="text" placeholder="King"></td>
+                <td><input type="date"></td>
+                <td><input type="text" placeholder="24000"></td>
+                <td>
+                    <select name="">
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90" selected>90</option>
+                        <option value="100">100</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" ></td>
+                <td><input type="text" placeholder="Steven"></td>
+                <td><input type="text" placeholder="King"></td>
+                <td><input type="date"></td>
+                <td><input type="text" placeholder="24000"></td>
+                <td>
+                    <select name="">
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70" selected>70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" ></td>
+                <td><input type="text" placeholder="Steven"></td>
+                <td><input type="text" placeholder="King"></td>
+                <td><input type="date"></td>
+                <td><input type="text" placeholder="24000"></td>
+                <td>
+                    <select name="">
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80" selected>80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" ></td>
+                <td><input type="text" placeholder="Steven"></td>
+                <td><input type="text" placeholder="King"></td>
+                <td><input type="date"></td>
+                <td><input type="text" placeholder="24000"></td>
+                <td>
+                    <select name="">
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100" selected>100</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            <div class="rows">
+                <select name="">
+                    <option value="1">row(s) 1-10 of 107</option>
+                    <option value="2">row(s) 1-10 of 107</option>
+                    <option value="3">row(s) 1-10 of 107</option>
+                </select>
+                <a href="formtableHW.html">Next</a>
+            </div>
+            <div class="adr btn">
+                <button>Add row</button>
+                <a href="welcome.html"><button type="submit">Go Back</button></a>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+</html>

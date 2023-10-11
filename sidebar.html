@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+       .head {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .nav {
+            position: fixed;
+            right: 0;
+            top: 0;
+            display: flex;
+            list-style: none;
+            gap: 10px;
+            flex-direction: column;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            padding-left: 25px;
+            height: 100vh;
+            background-color: blue;
+            translate: 400%;
+            transition: 500ms;
+        }
+
+        input {
+            /* display: ; */
+            height: 0px;
+            width: 0px;
+        }
+
+        label {
+            height: 20px;
+            width: 20px;
+            background-color: grey;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            z-index: 5;
+        }
+
+        label:has(input:checked) + .nav {
+            translate: 0;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header class="head">
+        <p>sidebar</p>
+
+        <label>
+            <input type="checkbox">
+            <div class="bar"></div>
+        </label>
+
+        <nav class="nav">
+            <li>Home</li>
+            <li>Project</li>
+            <li>Contact</li>
+            <li>About Us</li>
+            <li>Sign In</li>
+        </nav>
+
+
+    </header>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(./images/bg-2.png);
+            margin: 45px auto;
+            background-size: cover;
+        }
+
+        .container {
+            min-width: 600px;
+            width: 700px;
+        }
+
+        .head{
+            background-color: rgb(5, 135, 135);
+            padding: 35px;
+            color: white;
+        } 
+
+        .head img {
+            width: 55px;
+            position: absolute;
+            top: 12%;
+        }
+
+        .med {
+            font-size: 14px;
+        }
+
+        .logo {
+            display: flex;
+            gap: 25px;
+            margin: 30px;
+        }
+
+        .body {
+            padding: 35px;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .body {
+            background-color: white;
+        }
+        .body p{
+            margin-left: 25px;
+        }
+
+        .body input {
+            display: inline-block;
+            margin: 15px 0 25px 0;
+            outline: none;
+            width: 100%;
+            height: 45px;
+            padding: 10px;
+        }
+
+        .rad input{
+            width: 25px;
+            margin-bottom: 5px;
+            padding: 0;
+            height: 15px;
+        }
+
+        
+        .big {
+            font-size: 30px;
+            font-weight: lighter;
+            margin-left: 100px;
+        }
+
+        .btn {
+            margin: 10px;
+            display: flex;
+        }
+
+        .btn button {
+            padding: 10px;
+            color: white;
+            background-color: darkkhaki;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="head">
+
+            <div class="logo">
+                <img src="./images/profilepic.png" alt="">
+                <span class="big">Event Preference Survey</span>
+            </div>
+
+            <div class="med">
+                Due to safety concern, we are providing an alternative way to join the event.
+                This form is to collect your preference so that we can send you invitation accordingly.
+            </div>
+
+        </div>
+
+        <div class="body">
+
+            <p><span class="red">&ast;</span>Required</p>
+
+            <ol>
+
+                <li>
+                    Your Name <span class="red">&ast;</span><br>
+                    <input type="text" placeholder="Enter your name">
+                </li>
+
+                <li>
+                    Organization <br>
+                    <input type="text" placeholder="Enter your answer">
+                </li>
+
+                <li>
+                    Email Address<br>
+                    <input type="text" placeholder="Enter your answer">
+                </li>
+
+                <li>
+                    Would you like to join this event online or in person?<br>
+                    <small>An email with detailed instruction of how to join this event will bw sent after you submit this form</small><br>
+                    <div class="rad"><input type="radio" name="mode" id="online"><label for="online">Online</label></div>
+                    <div class="rad"><input type="radio" name="mode" id="in_person"><label for="in_person">In Person</label></div>
+                </li>
+
+            </ol>
+
+        </div>
+
+        <div class="btn">
+            <a href="welcome.html"><button type="submit">Go Back</button></a>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .toggle {
+            width: 58px;
+            height: 33px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .toggle input {
+            display: none;
+        }
+
+        .slider {
+            background-color: rgb(149, 141, 141);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            transition: .5s;
+            -webkit-transition: .5s;
+            border-radius: 40px;
+        }
+
+        .slider::before {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 4px;
+            background-color: white;
+            width: 25px;
+            height: 25px;
+            transition: .3s;
+            -webkit-transition: .3s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: rgb(21, 195, 21);
+        }
+
+        input:checked + .slider::before {
+            transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+        }
+
+    </style>
+
+</head>
+<body>
+    <label class="toggle">
+        <input type="checkbox">
+        <span class="slider"></span>
+    </label>
+</body>
+</html>
