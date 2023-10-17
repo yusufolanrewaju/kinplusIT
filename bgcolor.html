@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body, div{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1>Background Color Changer</h1>
+        <p>Choose  Color: <input type="text" id="bgColor"></p>
+    </div>
+</body>
+
+<script>
+    const bgColor = document.getElementById("bgColor");
+    bgColor.addEventListener("change", changeBgColor);
+    
+    function changeBgColor() {
+        document.body.style.backgroundColor = bgColor.value;
+        const uppercase = bgColor.value.toUpperCase();
+
+        if(uppercase === 'BLACK'){
+            document.body.style.color = 'white';
+            document.getElementById('bgColor').reset()  
+        }
+        else{
+            document.body.style.color = 'black';
+            document.getElementById('bgColor').reset()
+        }
+    }
+</script>
+
+</html>
