@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Age Calculator</h2>
+
+    <p><span>Current Year:</span><span id="Cyear"></span></p>
+    <p><span>Year of Birth:</span><span id="byear"></span></p>
+    <p><span>Age:</span><span id="age"></span></p>
+
+    <script>
+
+        document.getElementById('Cyear').innerHTML = new Date().getFullYear()
+        document.getElementById('byear').innerHTML = new Date('2000-01-18').getFullYear()
+        document.getElementById('age').innerHTML = new Date().getFullYear() - new Date('2000-02-18').getFullYear()
+
+    </script>
+
+</body>
+</html>

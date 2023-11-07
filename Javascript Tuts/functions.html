@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Functions</h1>
+    <h3>Addition Function</h3>
+    <p id="add"></p>
+    <h3>Multiplication Function</h3>
+    <p id="mult"></p>
+    <h3>Division Function</h3>
+    <p id="div"></p>
+    <h3>Subtraction Function</h3>
+    <p id="sub"></p>
+    <h3>Modulus Function</h3>
+    <p id="mod"></p>
+
+    <script>
+        let add = document.getElementById('add')
+        let mult = document.getElementById('mult')
+        let div = document.getElementById('div')
+        let mod = document.getElementById('mod')
+        let sub = document.getElementById('sub')
+
+        function addition(a,b) {
+            return a+b;
+        }
+
+        function subtraction(a,b) {
+            return a-b;
+        }
+
+        function division(a,b) {
+            return a/b;
+        }
+
+        function modulus(a,b) {
+            return a%b;
+        }
+
+        function multiplication(a,b) {
+            return a+b;
+        }
+
+        add.innerHTML = addition(4,5)
+        sub.innerHTML = subtraction(45,20)
+        mult.innerHTML = multiplication(13,25)
+        div.innerHTML = division(35,7)
+        mod.innerHTML = modulus(9,2)
+
+    </script>
+</body>
+</html>

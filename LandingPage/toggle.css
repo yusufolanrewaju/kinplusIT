@@ -1,72 +1,83 @@
-.slide {
-    height: 33px;
-    width: 58px;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.toggle {
+    width: 56px;
+    height: 32px;
     position: relative;
     display: block;
-    transform: scale(2.3);
-    margin: 50px;
+    margin: 10px;
 }
 
 .slider {
+    position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
     right: 0;
-    background-color: rgb(169, 66, 66);
-    position: absolute;
-    transition: .5s;
-    border-radius: 25px;
+    left: 0;
+    background-color: grey;
+    border-radius: 16px 10px;
+    transition: 0.7s;
 }
 
-.slide input {
-   display: none;
+input{
+    height: 0;
+    width: 0;
+    display: none;
 }
 
 .slider::before {
     content: '';
-    width: 25px;
-    height: 25px;
+    position: absolute;
+    background-color: white;
     top: 4px;
     left: 4px;
-    background-color: white;
-    position: absolute;
-    transition: .4s;
     border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    transition: 0.3s;
 }
 
-input:checked + .slider::before {
+.toggle:has(:hover,:focus) .slider::before {
+    scale: 1.07;
+}
+
+.toggle:has(input:checked) .slider {
+    border-radius: 10px 16px;
+}
+
+.toggle:has(input:checked) .slider::before{
     translate: 100%;
 }
 
-input:checked + .slider {
-    background-color: rgb(13, 208, 26);
+.toggle:has(input:checked) .slider{
+    background-color: green;
+}
+
+.on, .off {
+    position: absolute;
+    text-transform: uppercase;
+    top: 10px;
+    margin-left: 4px;
+    color: white;
+    font-size: 12px;
+    display: none;
+    transition:all .4s;
 }
 
 .off {
-    position: absolute;
-    top: 9px;
-    right: 3.5px;
-    text-transform: uppercase;
-    color: white;
-    font-size: smaller;
-    transition: .4s;
-}
-
-.on {
-    display: none;
-    position: absolute;
-    top: 9px;
-    left: 5px;
-    text-transform: uppercase;
-    color: white;
-    font-size: smaller;
-    transition: .1s;
-}
-
-input:checked ~ .on {
     display: inline-block;
+    right: 4px;
+    color: white
 }
 
-input:checked ~ .off {
+.toggle:has(input:checked) .off {
     display: none;
+}
+
+.toggle:has(input:checked) .on {
+    display: inline-block;
 }

@@ -12,8 +12,8 @@
         <h1>Port<span class="red">folio</span></h1>
         
         <ul>
-            <li><a href="">Home</a></li>
-            <li id="excercise">
+            <li><a href="#">Home</a></li>
+            <li class="excercise">
                 <a href="">Excercise</a>
 
                 <div class="content">
@@ -27,7 +27,16 @@
                     <a href="image_gallery.html">Image gallery</a>
                 </div>
             </li>
-            <li><a href="">Project</a></li>
+            <li class="excercise">
+                <a href="">Project</a>
+                
+                <div class="content">
+                    <a href="LandingPage/index.html">KinPlus Training</a>
+                    <a href="Project/realestate/index.html">Estate Management</a>
+                    <a href="Project/clinic.html">Clinic</a>
+                </div>
+
+            </li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -35,8 +44,6 @@
 
         </nav>
     </div>
-
-    <div class="backtotop"><a href="#">➡️</a></div>
 
     <div class="body">
         <div>
@@ -48,11 +55,29 @@
         <a href="images/Yusuf.jpg"><img src="images/Yusuf.jpg"></a>
     </div>
 
+
+    <script>
+        window.onscroll = function()
+        {
+            if(pageYOffset >= 500)
+            {
+                document.querySelector('.backtotop').style.visibility="visible"
+            }else
+            {
+                document.querySelector('.backtotop').style.visibility="hidden";
+            }
+        };
+
+    </script>
+
+
+    <div class="backtotop"><a href="#">➡️</a></div>
+
     <div id="about" class="sticky">
 
         <div class="head">ABOUT</div>
 
-        <div class="about_content">
+        <div class="about_content container">
 
             <p><span class="red">Gaming Enthusiast:</span> Beyond my technological pursuits, I find solace and inspiration in the world of gaming. It's not just a form of entertainment but a source of creative inspiration and a testament to the power of technology to transport us to different realities.
             </p>
