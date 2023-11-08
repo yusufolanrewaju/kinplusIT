@@ -1,41 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="refresh" content = "0; url = nav.html" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homepage</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            list-style: none;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: rgb(26, 77, 26);
+            color: white;
+        }
+
+        span {
+            position: absolute;
+            transform: translateY(48%);
+            margin-left: 10px;
+        }
+
+        .nav img {
+            width: 35px;
+            border-radius: 50px;
+        }
+
+        .content {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav a:hover {
+            font-weight: 400;
+            transform: scale(1.15);
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 690px;
+            line-height: 2em;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            background-color: bisque;
+            height: 45px;
+            align-items: center;
+            font-weight: 600;
+            bottom: 0;
+        }
+
+        .welcome {
+            font-size: clamp(40px,8vw,60px);
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        button {
+            border: none;
+            padding: 15px;
+            background-color: cadetblue;
+            color: white;
+            font-weight: bolder;
+            margin-top: 10px;
+            cursor: pointer;
+            width: 120px;
+        }
+
+        .dropdown .content {
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            width: 120px;
+            position: absolute;
+            display: none;
+            background-color: rgb(227, 224, 224);
+            overflow: hidden;
+        }
+
+        .dropdown .btn {
+            width: 120px;
+            cursor: pointer;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 10px 15px;
+            color: black;
+            text-transform: uppercase;
+            font-size: 12px;
+            border: none;
+            border-bottom: 1px solid black;
+
+        }
+
+        .dropdown:hover .content {
+            display: block;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>KinPlus Courses</h1>
-    <h3>Ordered List</h3>
-    <ol>
-        <li>Web Development</li>
-        <li>Graphics Design</li>
-        <li>Data Analysis</li>
-        <li>Social Media MAnagement</li>
-    </ol>
-    <ol type="A">
-        <li>Web Development</li>
-        <li>Graphics Design</li>
-        <li>Data Analysis</li>
-        <li>Social Media MAnagement</li>
-    </ol>
-    <ol type="I">
-        <li>Web Development</li>
-        <li>Graphics Design</li>
-        <li>Data Analysis</li>
-        <li>Social Media MAnagement</li>
-    </ol>
 
-    <h3>Unordered List</h3>
-    <ul>
-        <li>Web Development</li>
-        <li>Graphics Design</li>
-        <li>Data Analysis</li>
-        <li>Social Media MAnagement</li>
-    </ul>
+<div class="body">
 
+    <nav class="nav">
 
+        <div class="profile">
+            <img src="images/profilepic.png" alt="">
+            <span><a href="https://twitter.com/lereofafrica" target="_blank">Yusuf Olanrewaju</a></span>
+        </div>
+        
+        <div class="dropdown">
+               <div class="btn">Assignments</div>
+            <div class="content">
+                <a href="calendar.html">Calendar</a>
+                <a href="formtableHW.html">Form Table1</a>
+                <a href="formtablescw.html">Form Table2</a>
+                <a href="text.html">Google</a>
+                <a href="survey_form.html">Survey Form</a>
+                <a href="assessment.html">Color Tabs</a>
+                <a href="reg_form.html">Reg form</a>
+                <a href="image_gallery.html">Image gallery</a>
+            </div>
+        </div> 
+    </nav>
+
+    <main>
+        <div class="main">
+            <div class="welcome">Welcome</div>
+            <div class="chk">
+                Check the  navigation tab above to see pages <br> OR <br>
+                Click the button below to go to the latest page.
+            </div>
+            <a href="nav.html"><button>Check Latest</button></a>
+        </div>
+    </main>
+
+    <footer>
+        Copyright&nbsp;&nbsp; Yusuf &trade; &nbsp; 2023 &copy; 
+    </footer>
+
+</div>
 
 </body>
 </html>
