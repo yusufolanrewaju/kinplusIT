@@ -256,15 +256,9 @@ h5 {
     padding: 10px  30px;
 }
 
-.center-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .center-text img {
     mix-blend-mode: multiply;
+    margin-left: -15px;
 }
 
 .address a {
@@ -425,6 +419,17 @@ h4 {
 
     .described img {
         width: 100%;
+    }
+
+    .address {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .address>div {
+        width: 85%;
     }
 
 }
