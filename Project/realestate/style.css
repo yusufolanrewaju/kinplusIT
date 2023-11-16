@@ -418,6 +418,15 @@ h4 {
         padding: 45px;
     }
 
+    .described{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .described img {
+        width: 100%;
+    }
+
 }
 
 @media screen and (min-width: 850px) {
