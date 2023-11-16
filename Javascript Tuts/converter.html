@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Converter</title>
+</head>
+<body>
+  
+  <h1>JavaScript Functions</h1>
+  <div>
+    <p><b>Celcius to Fahrenheit Converter:</b></p>
+    <p>Enter Temperature in Celsius: <input type="number" id="celsiusInput"> </p>
+    <p id="demo"></p>
+  </div>
+
+  <div>
+    <p><b>Seconds to Minute(s) Converter:</b></p>
+    <p>Enter number of seconds to be converted: <input type="number" id="secondsInput"> </p>
+    <p id="mins"></p>
+  </div>
+
+  <div>
+    <p><b>Minutes to Hour(s) Converter:</b></p>
+    <p>Enter number of Minutes to be converted: <input type="number" id="minutesInput"> </p>
+    <p id="hrs"></p>
+  </div>
+
+  <div>
+    <p><b>Hours to Day(s) Converter:</b></p>
+    <p>Enter number of Hours to be converted: <input type="number" id="hoursInput"> </p>
+    <p id="days"></p>
+  </div>
+
+  <script>
+    function fahrenheitToCelsius(celsius) {
+      return (9/5) * celsius+32;
+    }
+    document.querySelector("#celsiusInput").oninput = displayCelsiusTemp
+
+    function displayCelsiusTemp(){  
+      let tempInput = document.querySelector("#celsiusInput").value
+      let celsiusTemp = fahrenheitToCelsius(tempInput);
+      let floorTemp = Math.floor(celsiusTemp);
+      let ceilTemp = Math.ceil(celsiusTemp)
+    document.getElementById("demo").innerHTML = celsiusTemp + "<br>" + floorTemp + "<br>" + ceilTemp ;
+    }
+
+    function secMin(seconds) {
+      return seconds/60;
+    }
+    document.querySelector("#secondsInput").oninput = displayMinsTemp
+
+    function displayMinsTemp(){  
+      let minTempInput = document.querySelector("#secondsInput").value
+      let minTemp = secMin(minTempInput);
+      let minFloorTemp = Math.floor(minTemp);
+      let minCeilTemp = Math.ceil(minTemp)
+      document.getElementById("mins").innerHTML = minTemp + " Minute(s) <br>" + minFloorTemp + " Minute(s) <br>" + minCeilTemp + " Minute(s)" ;
+    }
+
+    function minHrs(mins) {
+      return mins/60;
+    }
+    document.querySelector("#minutesInput").oninput = displayHrsTemp
+
+    function displayHrsTemp(){  
+      let hrsTempInput = document.querySelector("#minutesInput").value
+      let hrsTemp = minHrs(hrsTempInput);
+      let hrsFloorTemp = Math.floor(hrsTemp);
+      let hrsCeilTemp = Math.ceil(hrsTemp)
+    document.getElementById("hrs").innerHTML = hrsTemp + " Hour(s) <br>" + hrsFloorTemp + " Hour(s) <br>" + hrsCeilTemp + " Hour(s)" ;
+    }
+
+    function hrsdays(hrs) {
+      return hrs/24;
+    }
+    document.querySelector("#hoursInput").oninput = displayDaysTemp
+
+    function displayDaysTemp(){  
+      let daysTempInput = document.querySelector("#hoursInput").value
+      let daysTemp = hrsdays(daysTempInput);
+      let daysFloorTemp = Math.floor(daysTemp);
+      let daysCeilTemp = Math.ceil(daysTemp)
+    document.getElementById("days").innerHTML = daysTemp + " Day(s) <br>" + daysFloorTemp + " Day(s) <br>" + daysCeilTemp + " Day(s)" ;
+    }
+
+  </script>
+
+
+</body>
+</html>
