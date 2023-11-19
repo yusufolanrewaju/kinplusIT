@@ -301,7 +301,6 @@ footer {
 }
     
 .sticky {
-    top: 45px;
     position: sticky;
-    min-height: 100vh;
+    top: 45px;
 }
