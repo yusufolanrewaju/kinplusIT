@@ -16,8 +16,54 @@ function startTime() {
     let m = today.getMinutes();
     let s = today.getSeconds();
     let ms = today.getMilliseconds();
+    h = checkTime(h)
     m = checkTime(m);
     s = checkTime(s);
+
+    h <= 12 ? document.querySelector(".md").textContent = "AM" : document.querySelector(".md").textContent = "PM";
+    
+    switch (h) {
+      case 13:
+        h = 1;
+        break;
+      case 14:
+        h = 2;
+        break;
+      case 15:
+        h = 3;
+        break;
+      case 16:
+        h = 4;
+        break;
+      case 17:
+        h = 5;
+        break;
+      case 18:
+        h = 6;
+        break;
+      case 19:
+        h = 7;
+        break;
+      case 20:
+        h = 8;
+        break;
+      case 21:
+        h = 9;
+        break;
+      case 22:
+        h = 10;
+        break;
+      case 23:
+        h = 11;
+        break;
+      case 0:
+        h=12;
+        break;
+    
+      default:
+        break;
+    }
+      
     document.getElementById('time').innerHTML =  h + ":" + m + ":" + s;
     document.getElementById('ms').innerHTML = ":" + ms;
     setTimeout(startTime, 10);

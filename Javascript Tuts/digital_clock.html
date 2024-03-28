@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Digital Clock</title>
     <script src="index.js"></script>
 
     <style>
@@ -29,11 +29,16 @@
         font-weight: bold;
         font-family: 'Orbitron', sans-serif;
         letter-spacing: 5px;
+        text-align: center;
       }
 
       #ms {
         font-size: .7rem;
         display: none;
+      }
+
+      .md {
+        font-size: 15px;
       }
 
       button{
@@ -59,7 +64,10 @@
     <div>
         <h1>Digital Clock</h1>
     
-        <p><span id="time"></span><span id="ms"></span></p>
+        <p>
+          <span id="time"></span><span id="ms"></span>
+          <br> <span class="md"></span>
+        </p>
 
         <button onclick="showMs()">Click to Show / hide MilliSeconds</button>
     </div>

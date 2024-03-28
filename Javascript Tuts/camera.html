@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Camera</title>
+</head>
+<body>
+
+    <video autoplay id="cameraInput"></video>
+
+    <script>
+
+        const cameraInput = document.getElementById('cameraInput');
+
+        navigator.mediaDevices.getUserMedia({ video : true})
+        .then(stream => {
+            cameraInput.srcObject = stream;
+        })
+        .catch(error => {
+            console.error("Unable to use your camera, please enable camera permission for this site"), error
+            document.write("Unable to use your camera, please enable camera permission for this site"), error;
+        });
+
+    </script>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        video{
+            width: 350px;
+            border: 5px solid rgb(217, 51, 51);
+            padding: 5px;
+            background-color: #000;
+        }
+    </style>
+    
+</body>
+</html>
