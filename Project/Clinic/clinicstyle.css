@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{ 
+    color: white;
+    position: relative;
+}
+
+.get {
+    position: absolute;
+    background-color: rgb(85, 85, 217);
+    padding: 15px 25px;
+    right: 0 ;
+    bottom: -25px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px 0 0 5px;
+}
+
+hr {
+    width: 45px;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    color: black;
+    background-color: white;
+}
+
+.nav li{
+    padding-bottom: 10px;
+    cursor: default;
+}
+
+.nav li:hover {
+    border-bottom: 2px solid rgb(55, 118, 252);
+}
+
+.nav .active {
+    border-bottom: 2px solid rgb(55, 118, 252);
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 35px;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.head {
+    border-bottom: 1px solid black;
+    color: black;
+    background-color: white;
+}
+
+.blue {
+    color: rgb(55, 118, 252);
+}
+
+section{
+    margin: 20px;
+}
+
+.big {
+    background: url(Gallery/italy-mountains-dawn-daybreak-147411.jpeg) rgb(55, 118, 252);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    margin: 0;
+    position: relative;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.form h1, .form small, label {
+    color: #000;
+}
+
+.btn {
+    padding: 10px;
+    background-color: rgb(55, 118, 252);
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.containers{
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px 0.3px black;
+    height: max-content;
+    overflow: hidden;
+    padding: 0 15px;
+    margin: 0 20px;
+}
+
+.form {
+    padding: 20px;
+    width: 50%;
+}
+
+.formContact {
+    margin: 100px 0;
+    padding: 30px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+form .btn, form textarea, label {
+    grid-column: span 2;
+}
+
+form input:not(input[type=radio]), textarea {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    height: 50px;
+    outline: none;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    height: 200px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(55, 118, 252);
+    border-radius: 15px;
+    height: 170px;
+    width: 30%;
+    padding: 30px;
+    padding-left: 75px;
+    font-size: large;
+    justify-content: center;
+    margin-top: 40px;
+    position: relative;
+}
+
+.image {
+    position: absolute;
+    left: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(83, 126, 220);
+    height: 50px;
+}
+
+small, label {
+    font-size: 14px;
+}
+
+ul {
+    list-style: square;
+}
+
+.bottom {
+    background-color: rgb(88, 121, 192);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    height: max-content;
+    padding: 100px 50px;
+} 
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.row {
+    display: flex;
+    gap: 35px;
+}
+
+.anchor {
+    gap: 0;
+}
+
+.bottom > div {
+    width: 25%;
+}
+
+.bottom hr {
+    background-color: white;
+}
+
+.bottom a {
+    padding: 10px;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;
+}
+
+.email {
+    position: relative;
+    height: 35px;
+}
+
+.email input {
+    padding: 10px;
+    border-radius: 2px 0 0 2px;
+    border: none;
+    outline: none;
+    /* width: 200px; */
+    height: 100%;
+}
+
+.send {
+    height: 100%;
+    width: 35px;
+    border-radius: 0 5px 5px 0;
+    background-color: blue;
+    position: absolute;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
